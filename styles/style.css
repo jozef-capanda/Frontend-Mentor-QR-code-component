@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* colors */
+  --white: #ffffff;
+  --light-gray: #d6e2f0;
+  --greyish-blue: #7b879d;
+  --dark-blue: #1f3251;
+  --blue: #2c7dfa;
+  /* font */
+  --font: "Outfit", sans-serif;
+
+  --max-width: 1440px;
+
+  /* box shadow */
+  --shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+html {
+  /*10px*/
+  font-size: 62.5%;
+}
+
+body {
+  max-width: var(--max-width);
+  background-color: var(--light-gray);
+  font-family: var(--font);
+  height: 98vh;
+  margin: 0 auto;
+  display: grid;
+  place-content: center;
+  position: relative;
+}
+
+.card {
+  width: 32rem;
+  height: 49.7rem;
+  padding: 1.6rem;
+  border-radius: 2rem;
+  background-color: var(--white);
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.card img {
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.card h2 {
+  padding-top: 2.6rem;
+  font-weight: 700;
+  color: var(--dark-blue);
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+.card p {
+  padding-top: 1.9rem;
+  color: var(--greyish-blue);
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.card p,
+.card h2 {
+  padding-inline: 1.8rem;
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.attribution {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.attribution a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+@media (max-width: 390px) {
+  .line-break::after {
+    content: "\a";
+    white-space: pre;
+  }
+}
